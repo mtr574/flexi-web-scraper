@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Ruby",
-  "description": "A barebones Rails app, which can easily be deployed to Heroku",
+  "name": "Ruby-Image-Resizer",
+  "description": "Resize any image to different use case sizes",
   "image": "heroku/ruby",
-  "repository": "https://github.com/heroku/ruby-getting-started",
-  "keywords": ["ruby", "rails" ],
+  "repository": "https://github.com/mtr574/ruby-image-resizer",
+  "keywords": ["ruby", "rails"],
   "addons": [ "heroku-postgresql" ]
 }
