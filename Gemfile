@@ -3,9 +3,13 @@ ruby '2.2.5'
 gem 'cowsay'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
 # Use postgresql as the database for Active Record
-gem 'sqlite3'
-gem 'pg'
+gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.3'
