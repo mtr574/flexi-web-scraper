@@ -1,0 +1,1 @@
+json.partial! "selectors/selector", selector: @selector

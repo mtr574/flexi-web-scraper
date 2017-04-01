@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Source list</h1>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Last Run</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sources.each do |source| %>
+      <tr>
+        <td><%= source.url[0..30].gsub(/\s*$/, '...') %></td>
+        <td><%= source.last_run_at.nil? ? 'n/a':source.last_run_at.strftime("%w-%m-%Y @ %H:%M:%S") %></td>
+        <td><%= source.created_at.strftime("%w-%m-%Y @ %H:%M:%S") %></td>
+        <td><%= source.updated_at.strftime("%w-%m-%Y @ %H:%M:%S") %></td>
+        <td><%= link_to 'Run', source %></td>
+        <td><%= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Source', new_source_path, :class => 'btn btn-default' %>

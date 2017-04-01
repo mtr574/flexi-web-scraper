@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @selector.source_id %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @selector.host %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @selector.value %>
+</p>
+
+<%= link_to 'Edit', edit_selector_path(@selector) %> |
+<%= link_to 'Back', selectors_path %>

@@ -11,14 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707111715) do
+ActiveRecord::Schema.define(version: 20170328191555) do
 
-  create_table "widgets", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.text     "description"
-    t.integer  "stock"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.float    "price"
+    t.string   "currency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "product_id"
+    t.string   "title"
+    t.string   "author"
+    t.float    "stars"
+    t.string   "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "selectors", force: :cascade do |t|
+    t.integer  "source_id"
+    t.string   "host"
+    t.string   "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sources", force: :cascade do |t|
+    t.integer  "css_selector"
+    t.string   "url"
+    t.datetime "last_run_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

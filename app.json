@@ -1,8 +1,8 @@
 {
-  "name": "Ruby-Image-Resizer",
-  "description": "Resize any image to different use case sizes",
+  "name": "flexi-web-scraper",
+  "description": "flexible web scraper",
   "image": "heroku/ruby",
-  "repository": "https://github.com/mtr574/ruby-image-resizer",
+  "repository": "https://github.com/mtr574/flexi-web-scraper",
   "keywords": ["ruby", "rails"],
   "addons": [ "heroku-postgresql" ]
 }

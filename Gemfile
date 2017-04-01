@@ -6,12 +6,14 @@ gem 'rails', '4.2.5'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'pry'
 end
 
 # Use postgresql as the database for Active Record
 gem 'pg', group: :production
-gem 'rails_12factor', group: :production
-# Use SCSS for stylesheets
+gem 'rails_12factor', group: :production # serve static assets & logging
+# SASS is so cool!
 gem 'sass-rails', '~> 5.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -37,9 +39,4 @@ gem 'spring',        group: :development
 
 gem 'puma'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+gem 'httparty'
