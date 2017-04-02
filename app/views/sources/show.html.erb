@@ -7,11 +7,6 @@
   <%= @source.url %>
 </p>
 
-<p>
-  <strong>Selectors:</strong>
-  <%= @source.css_selector %>
-</p>
-
 <%= link_to 'Run', source_path(@source, :do => "fetch_source"), :class => 'btn btn-success' %>
-<%= link_to 'Edit', edit_source_path(@source), :class => 'btn btn-info' %>
-<%= link_to 'Back', sources_path, :class => 'btn btn-default' %>
+<%= link_to 'Edit', edit_source_path(@source) %>
+<%= link_to 'Back', sources_path %>
