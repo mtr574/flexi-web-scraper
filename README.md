@@ -1,5 +1,18 @@
 ## Web scrapper
 
+### Usage
+- clone it
+`git clone https://github.com/mtr574/flexi-web-scraper`
+- bundle it
+`bundle`
+- migrate it
+`rake db:migrate RAILS_ENV=development`
+- run it
+`rails s`
+
+- you can test with local file copied from walmart's website
+`http://localhost:3000/walmart_product.html`
+
 ##### Motivation:
 1. Fetch product & reviews data from given URL, in this example Walmart.com
 2. Store these models in Database
