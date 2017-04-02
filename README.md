@@ -14,7 +14,7 @@ Optionals:
 
 ##### DB Design
 Model: source
-Attributes: id, url, script, last_run_at, created_at, updated_at
+Attributes: id, url, last_run_at, created_at, updated_at
 
 Model: product
 Attributes: id, name, price, currency, created_at, updated_at
@@ -26,21 +26,18 @@ Attributes: id, product_id, title, author, stars, body, created_at, updated_at
 ##### Stack
 Ruby 2.2.5
 Rails 4
-Postgres
-Sqlite3
+Postgres (in production)
+Sqlite3 (in development)
 
 ##### Flow:
-- Ruby micro-service fetches URL's data, runs JavaScript (execJS) to fetch the current data with lodash - it provides flexible DOM control.
-- the service returns JSON formatted object with the parsed data.
+- Ruby controller fetches URL's HTML data with Nokogiri,selecting DOM elements by CSS selectors.
 
-##### UI
-AngularJS tables with filters for reviews by keyword
 
 Gems in use:
-- https://github.com/sstephenson/execjs
+- https://github.com/sparklemotion/nokogiri
 - https://github.com/jnunemaker/httparty
 
 #### Why I this stack?
-- RoR for fast MVC building (with generators)
-- HTTParty gem i'm familiar with, also a response time winner in comparison of 3 gems
-- Nokogiri
+- RoR for fast MVC web-app, using generator
+- HTTParty gem i'm familiar with, also a response time winner in comparison of 3 other gems
+- Nokogiri parsing HTML made easy with CSS selectors

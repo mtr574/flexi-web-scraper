@@ -73,12 +73,6 @@ class SourcesController < ApplicationController
       # update source last_run_at
       @source.touch(:last_run_at)
 
-      # user selector hash of key:value
-      css_selectors_a = Hash.new
-      # @source.css_selectors.each do |selector|
-      #   css_selectors_h[selector.to_sym] = selector.value
-      # end
-
       # parse HTML
       html = Nokogiri::HTML(document)
       product_title = get_text_by_css_selector(html, 'title')
